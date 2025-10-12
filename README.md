@@ -3,6 +3,19 @@
 
 I conduct research in Artificial Intelligence, with an emphasis on Machine Learning and Deep Learning applied to Computer Vision. My research designs and implements equivariant convolutions on discrete and continuous groups, including gauge equivariance on Riemannian manifolds, to produce calibrated and interpretable probabilistic estimates. I assess calibration, error, and generalization with attention to computational efficiency. I investigate equivariant neural operators and spectral formulations inspired by PDEs for transfer across resolutions and discretizations. I study L-alfa clustering in the SPD cone under AIRM, applied to Diffusion Tensor Magnetic Resonance Imaging segmentation. I develop PyTorch libraries and reproducible pipelines for classification, segmentation, and detection, targeting models that are robust, scalable, reliable, and useful for scientific applications.
 
+<div align="center">
+  <img
+    height="180"
+    alt="GitHub Stats"
+    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&v=10&r=20251012-1905"
+  />
+  <img
+    height="180"
+    alt="Top Languages"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&v=10&r=20251012-1905"
+  />
+</div>
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake-dark.svg" />
