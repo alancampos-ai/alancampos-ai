@@ -58,6 +58,7 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 </div>
 <br>
 
+
 <div>
   <sub><small>
 - <sub><small><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/2600343834625437">http://lattes.cnpq.br/2600343834625437</a></small></sub>
@@ -65,4 +66,3 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 - <sub><small><strong>ResearcherID:</strong> <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a></small></sub>
   </small></sub>
 </div>
-
