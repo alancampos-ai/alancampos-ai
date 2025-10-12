@@ -1,17 +1,27 @@
 name: snake
 
 on:
+  push:
+    branches: [ main ]     
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3 * * *'     
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    if: github.actor != 'github-actions[bot]'  
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Gerar animações
         uses: Platane/snk@v3
         with:
