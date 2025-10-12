@@ -1,14 +1,13 @@
-git clone https://github.com/alancampos-ai/alancampos-ai.git
-cd alancampos-ai
-mkdir -p .github/workflows
-cat > .github/workflows/snake.yml <<'YAML'
 name: snake
+
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: '0 3 * * *' 
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,6 +19,7 @@ jobs:
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
+
       - name: Publicar no branch output
         uses: crazy-max/ghaction-github-pages@v3
         with:
@@ -27,7 +27,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-YAML
-git add .github/workflows/snake.yml
-git commit -m "add snake workflow"
-git push origin main
