@@ -1,18 +1,18 @@
 <h1 align="center">Alan Campos</h1>
-<p align="center">Doutorando em Ciências Computacionais — Universidade do Estado do Rio de Janeiro</p>
+<p align="center">Doctoral Candidate in Computational Sciences — Universidade do Estado do Rio de Janeiro</p>
 
-Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de Máquina e Deep Learning aplicados à Visão Computacional. Minha pesquisa projeta e implementa convoluções equivariantes em grupos discretos e contínuos, incluindo equivariância gauge em variedades Riemannianas, para estimativas probabilísticas calibradas e interpretáveis. Avalio calibração, erro e generalização com atenção à eficiência computacional. Investigo operadores neurais equivariantes e formulações espectrais inspiradas em EDPs para transferência entre resoluções e discretizações. Estudo clusterização L-alfa no cone SPD sob AIRM aplicada à segmentação por Ressonância Magnética por Tensor de Difusão. Desenvolvo bibliotecas em PyTorch e pipelines reprodutíveis para classificação, segmentação e detecção, visando modelos robustos, escaláveis e úteis a aplicações científicas.
+I conduct research in Artificial Intelligence, with an emphasis on Machine Learning and Deep Learning applied to Computer Vision. My research designs and implements equivariant convolutions on discrete and continuous groups, including gauge equivariance on Riemannian manifolds, to produce calibrated and interpretable probabilistic estimates. I assess calibration, error, and generalization with attention to computational efficiency. I investigate equivariant neural operators and spectral formulations inspired by PDEs for transfer across resolutions and discretizations. I study L-alfa clustering in the SPD cone under AIRM, applied to Diffusion Tensor Magnetic Resonance Imaging segmentation. I develop PyTorch libraries and reproducible pipelines for classification, segmentation, and detection, targeting models that are robust, scalable, reliable, and useful for scientific applications.
 
 <div align="center">
   <img
     height="180"
     alt="GitHub Stats"
-    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&commits_year=2025&v=6"
+    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&v=9"
   />
   <img
     height="180"
     alt="Top Languages"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&v=6"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&v=9"
   />
 </div>
 
