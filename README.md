@@ -7,12 +7,12 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
   <img
     height="180"
     alt="GitHub Stats"
-    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&v=9"
+    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&v=10&r=20251012-1905"
   />
   <img
     height="180"
     alt="Top Languages"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&v=9"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&v=10&r=20251012-1905"
   />
 </div>
 
