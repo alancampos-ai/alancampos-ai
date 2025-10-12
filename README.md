@@ -25,7 +25,7 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
 </p>
 
 <p align="left">
-  <!-- Linguagens -->
+  <!-- Languages -->
   <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -36,16 +36,17 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
   <!-- IDEs / Notebooks -->
   <img src="https://cdn.simpleicons.org/spyderide" alt="Spyder" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- Ambiente / Ferramentas -->
+  <!-- Environment / Tools -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt="Anaconda" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- Bancos de Dados -->
+  <!-- Databases -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle Database" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-  <!-- SO -->
+  <!-- Operating Systems -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" height="40"/>
 </p>
 <br>
+
 
 <div>
   <sub><small>
