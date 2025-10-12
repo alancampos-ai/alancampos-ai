@@ -25,7 +25,7 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
 </p>
 
 <p align="left">
-
+  <!-- Linguagens -->
   <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -33,16 +33,16 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-
+  <!-- IDEs / Notebooks -->
   <img src="https://cdn.simpleicons.org/spyderide" alt="Spyder" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-
+  <!-- Ambiente / Ferramentas -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/anaconda/anaconda-original.svg" alt="Anaconda" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-
+  <!-- Bancos de Dados -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle Database" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-
+  <!-- SO -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" height="40"/>
 </p>
 <br>
