@@ -61,9 +61,3 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 - <sub><small><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/2600343834625437">http://lattes.cnpq.br/2600343834625437</a></small></sub>
 - <sub><small><strong>ORCID:</strong> <a href="https://orcid.org/0009-0009-2264-1232">0009-0009-2264-1232</a></small></sub>
 - <sub><small><strong>ResearcherID:</strong> <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a></small></sub>
-
-
-
-<!--REPO-LIST:START-->
-- [alancampos-ai](https://github.com/alancampos-ai/alancampos-ai) — My Profile · Python · ⭐ 0
-<!--REPO-LIST:END-->
