@@ -49,15 +49,14 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 <br>
 
 <div>
-   <small>
+  <sub><small>
     <strong>• A comparative study on the influence of α-centroids over Κ-means algorithm and its variants in DT-RMI segmentation</strong>
     &nbsp;
     <a href="https://doi.org/10.21203/rs.3.rs-1819519/v1"><img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14"></a>&nbsp;&nbsp;
     <a href="https://doi.org/10.21203/rs.3.rs-1819519/v1"><img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14"></a>
-  </small>
+  </small></sub>
 </div>
 <br>
-
 
 <div>
   <sub><small>
