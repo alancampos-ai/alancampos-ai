@@ -27,6 +27,7 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 
 
 <!--REPO-LIST:START-->
+- [alancampos-ai](https://github.com/alancampos-ai/alancampos-ai) — My Profile · Python · ⭐ 0
 <!--REPO-LIST:END-->
 
 
