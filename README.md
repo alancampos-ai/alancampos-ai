@@ -3,13 +3,18 @@
 
 Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de Máquina e Deep Learning aplicados à Visão Computacional. Minha pesquisa projeta e implementa convoluções equivariantes em grupos discretos e contínuos, incluindo equivariância gauge em variedades Riemannianas, para estimativas probabilísticas calibradas e interpretáveis. Avalio calibração, erro e generalização com atenção à eficiência computacional. Investigo operadores neurais equivariantes e formulações espectrais inspiradas em EDPs para transferência entre resoluções e discretizações. Estudo clusterização L-alfa no cone SPD sob AIRM aplicada à segmentação por Ressonância Magnética por Tensor de Difusão. Desenvolvo bibliotecas em PyTorch e pipelines reprodutíveis para classificação, segmentação e detecção, visando modelos robustos, escaláveis e úteis a aplicações científicas.
 
-<p align="center">
-  <img height="180" alt="GitHub Stats"
-       src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=pt-br" />
-  &nbsp;&nbsp;
-  <img height="180" alt="Top Languages"
-       src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=pt-br" />
-</p>
+<div align="center">
+  <img
+    height="180"
+    alt="GitHub Stats"
+    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&cache_seconds=7200&v=1"
+  />
+  <img
+    height="180"
+    alt="Top Languages"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&cache_seconds=7200&v=1"
+  />
+</div>
 
 <p align="center">
   <picture>
@@ -18,6 +23,7 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
     <img alt="snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake.svg" />
   </picture>
 </p>
+
 
 
 <!--REPO-LIST:START-->
@@ -47,9 +53,18 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
   <!-- SO -->
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" height="40"/>
 </p>
+<br>
+
+
+<div>
+  <strong>• A comparative study on the influence of α-centroids over Κ-means algorithm and its variants in DT-RMI segmentation</strong>
+  <a href="https://doi.org/10.21203/rs.3.rs-1819519/v1"><img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="20"></a>&nbsp;&nbsp;
+  <a href="https://doi.org/10.21203/rs.3.rs-1819519/v1"><img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="20"></a>
+</div>
+<br>
 
 - **Lattes:** <a href="http://lattes.cnpq.br/2600343834625437">http://lattes.cnpq.br/2600343834625437</a>  
 - **ORCID:** <a href="https://orcid.org/0009-0009-2264-1232">0009-0009-2264-1232</a>  
-- **Web of Science (ResearcherID):** <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a>
+- **ResearcherID:** <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a>
 
 
