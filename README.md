@@ -7,14 +7,16 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
   <img
     height="180"
     alt="GitHub Stats"
-    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&cache_seconds=7200&v=1"
+    src="https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&rank_icon=percentile&number_format=short&hide_border=true&theme=transparent&locale=en&commits_year=2025&v=3"
   />
   <img
     height="180"
     alt="Top Languages"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&cache_seconds=7200&v=1"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=8&card_width=320&hide_border=true&theme=transparent&locale=en&v=3"
   />
 </div>
+
+
 
 <p align="center">
   <picture>
@@ -23,13 +25,6 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
     <img alt="snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake.svg" />
   </picture>
 </p>
-
-
-
-<!--REPO-LIST:START-->
-- [alancampos-ai](https://github.com/alancampos-ai/alancampos-ai) — My Profile · Python · ⭐ 0
-<!--REPO-LIST:END-->
-
 
 <p align="left">
   <!-- Linguagens -->
@@ -68,4 +63,6 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 - **ORCID:** <a href="https://orcid.org/0009-0009-2264-1232">0009-0009-2264-1232</a>  
 - **ResearcherID:** <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a>
 
-
+<!--REPO-LIST:START-->
+- [alancampos-ai](https://github.com/alancampos-ai/alancampos-ai)
+<!--REPO-LIST:END-->
