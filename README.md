@@ -16,7 +16,6 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
   />
 </div>
 
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake-dark.svg" />
