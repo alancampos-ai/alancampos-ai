@@ -36,8 +36,6 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <!-- IDEs / Notebooks -->
-  <img src="https://cdn.simpleicons.org/eclipseide" alt="Eclipse IDE" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://cdn.simpleicons.org/apachenetbeanside" alt="Apache NetBeans" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.simpleicons.org/spyderide" alt="Spyder" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
   <!-- Ambiente / Ferramentas -->
@@ -62,7 +60,3 @@ Desenvolvo pesquisa em Inteligência Artificial, com ênfase em Aprendizado de M
 - **Lattes:** <a href="http://lattes.cnpq.br/2600343834625437">http://lattes.cnpq.br/2600343834625437</a>  
 - **ORCID:** <a href="https://orcid.org/0009-0009-2264-1232">0009-0009-2264-1232</a>  
 - **ResearcherID:** <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a>
-
-<!--REPO-LIST:START-->
-- [alancampos-ai](https://github.com/alancampos-ai/alancampos-ai) — My Profile · Python · ⭐ 0
-<!--REPO-LIST:END-->
