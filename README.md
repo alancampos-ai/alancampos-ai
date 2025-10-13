@@ -1,7 +1,13 @@
+Biography
+<br>
+<br>
+Doctoral candidate in Computational Sciences at Rio de Janeiro State University. Bachelor in Computer Science from the Rio de Janeiro State University. I conduct research in Artificial Intelligence, with an emphasis on Machine Learning and Deep Learning applied to Computer Vision. My research designs and implements equivariant convolutions on discrete and continuous groups, including gauge equivariance on Riemannian manifolds, to produce calibrated and interpretable probabilistic estimates. I assess calibration, error, and generalization with attention to computational efficiency. I investigate equivariant neural operators and spectral formulations inspired by PDEs for transfer across resolutions and discretizations. I study L-alfa clustering in the SPD cone under AIRM, applied to Diffusion Tensor Magnetic Resonance Imaging segmentation. I develop PyTorch libraries and reproducible pipelines for classification, segmentation, and detection, targeting models that are robust, scalable, reliable, and useful for scientific applications.
+<br>
+<br>
 
+Technology
 
-I conduct research in Artificial Intelligence, with an emphasis on Machine Learning and Deep Learning applied to Computer Vision. My research designs and implements equivariant convolutions on discrete and continuous groups, including gauge equivariance on Riemannian manifolds, to produce calibrated and interpretable probabilistic estimates. I assess calibration, error, and generalization with attention to computational efficiency. I investigate equivariant neural operators and spectral formulations inspired by PDEs for transfer across resolutions and discretizations. I study L-alfa clustering in the SPD cone under AIRM, applied to Diffusion Tensor Magnetic Resonance Imaging segmentation. I develop PyTorch libraries and reproducible pipelines for classification, segmentation, and detection, targeting models that are robust, scalable, reliable, and useful for scientific applications.
-
+<br>
 <p align="left">
   <!-- Languages -->
   <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" height="40"/>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -32,7 +38,10 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
     <img alt="snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake.svg" />
   </picture>
 </p>
+<br>
 
+Works
+<br>
 <div>
   <sub><small>
     <strong>• A comparative study on the influence of α-centroids over Κ-means algorithm and its variants in DT-RMI segmentation</strong>
@@ -43,10 +52,12 @@ I conduct research in Artificial Intelligence, with an emphasis on Machine Learn
 </div>
 <br>
 
+Other IDs
 <div>
   <sub><small>
-- <sub><small><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/2600343834625437">http://lattes.cnpq.br/2600343834625437</a></small></sub>
 - <sub><small><strong>ORCID:</strong> <a href="https://orcid.org/0009-0009-2264-1232">0009-0009-2264-1232</a></small></sub>
 - <sub><small><strong>ResearcherID:</strong> <a href="https://www.webofscience.com/wos/author/record/LDF-1065-2024">LDF-1065-2024</a></small></sub>
+- <sub><small><strong>Lattes:</strong> <a href="http://lattes.cnpq.br/2600343834625437">http://lattes.cnpq.br/2600343834625437</a></small></sub>
   </small></sub>
 </div>
+<br>
