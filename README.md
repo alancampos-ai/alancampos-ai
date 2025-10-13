@@ -1,3 +1,5 @@
+
+
 I conduct research in Artificial Intelligence, with an emphasis on Machine Learning and Deep Learning applied to Computer Vision. My research designs and implements equivariant convolutions on discrete and continuous groups, including gauge equivariance on Riemannian manifolds, to produce calibrated and interpretable probabilistic estimates. I assess calibration, error, and generalization with attention to computational efficiency. I investigate equivariant neural operators and spectral formulations inspired by PDEs for transfer across resolutions and discretizations. I study L-alfa clustering in the SPD cone under AIRM, applied to Diffusion Tensor Magnetic Resonance Imaging segmentation. I develop PyTorch libraries and reproducible pipelines for classification, segmentation, and detection, targeting models that are robust, scalable, reliable, and useful for scientific applications.
 
 <p align="left">
