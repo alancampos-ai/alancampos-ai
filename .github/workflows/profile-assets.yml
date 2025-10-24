@@ -3,7 +3,7 @@ name: profile-assets
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"   # 1x/dia. ajuste se quiser
+    - cron: "0 3 * * *"   # diário (03:00 UTC)
 
 permissions:
   contents: write
@@ -34,11 +34,17 @@ jobs:
           curl -fsSL "https://github-readme-stats.vercel.app/api?username=${GITHUB_REPOSITORY_OWNER}&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=transparent" -o assets/stats.svg || echo '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">stats.svg placeholder</text></svg>' > assets/stats.svg
           curl -fsSL "https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_REPOSITORY_OWNER}&layout=compact&langs_count=10&theme=transparent" -o assets/toplangs.svg || echo '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">toplangs.svg placeholder</text></svg>' > assets/toplangs.svg
 
+      - name: Sanity check dos SVGs
+        run: |
+          test -s assets/snake.svg
+          test -s assets/snake-dark.svg
+          grep -q "<animate" assets/snake.svg
+
       - name: Cache-bust automático no README
         run: |
           run_id="${{ github.run_id }}"
-          # Atualiza qualquer ocorrência de snake.svg ou snake-dark.svg adicionando ?v=<run_id>
-          perl -0777 -pe "s|(assets/snake(-dark)?\.svg)(\?v=[^\"')]+)?|\$1?v=${run_id}|g" -i README.md
+          # Atualiza ocorrências de assets/snake*.svg OU ./assets/snake*.svg, com ou sem ?v=...
+          sed -E -i "s#(\./)?assets/snake(-dark)?\.svg(\?v=[^\"')]+)?#assets/snake\2.svg?v=${run_id}#g" README.md
 
       - name: Commit no main
         uses: stefanzweifel/git-auto-commit-action@v5
