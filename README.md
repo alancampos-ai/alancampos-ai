@@ -32,8 +32,11 @@ Technology
 <br>
 
 <p align="center">
-  <img src="assets/snake-dark.svg#gh-dark-mode-only" alt="GitHub contribution snake animation">
-  <img src="assets/snake.svg#gh-light-mode-only" alt="GitHub contribution snake animation">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/snake.svg">
+    <img alt="GitHub contribution snake animation" src="assets/snake.svg">
+  </picture>
 </p>
 <br>
 
