@@ -3,7 +3,7 @@ name: profile-assets
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # 03:00 UTC ≈ 00:00 América/São_Paulo (BRT, sem DST)
+    - cron: "0 3 * * *"  # 03:00 UTC ≈ 00:00 America/Sao_Paulo
 
 permissions:
   contents: write
@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Preparar diretório de saída
         shell: bash
@@ -53,22 +54,11 @@ jobs:
             fi
           done
 
-      - name: Stats e Top Langs (com placeholders)
-        shell: bash
-        run: |
-          set -Eeuo pipefail
-          IFS=$'\n\t'
-          curl_opts=(--fail --silent --show-error --location --max-time 20 --retry 3 --retry-delay 2)
-          curl "${curl_opts[@]}" "https://github-readme-stats.vercel.app/api?username=${GITHUB_REPOSITORY_OWNER}&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=transparent" -o assets/stats.svg \
-            || printf '%s\n' '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">stats.svg placeholder</text></svg>' > assets/stats.svg
-          curl "${curl_opts[@]}" "https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_REPOSITORY_OWNER}&layout=compact&langs_count=10&theme=transparent" -o assets/toplangs.svg \
-            || printf '%s\n' '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">toplangs.svg placeholder</text></svg>' > assets/toplangs.svg
-
       - name: Sanidade dos SVGs
         shell: bash
         run: |
           set -Eeuo pipefail
-          for f in assets/snake.svg assets/snake-dark.svg assets/stats.svg assets/toplangs.svg; do
+          for f in assets/snake.svg assets/snake-dark.svg; do
             test -s "$f"
           done
           ls -l assets
@@ -81,15 +71,20 @@ jobs:
           if [ -f README.md ]; then
             sed -E -i \
               -e "s#(\./)?assets/snake(-dark)?\.svg(\?v=[^\"')]+)?#assets/snake\2.svg?v=${run_id}#g" \
-              -e "s#(\./)?assets/stats\.svg(\?v=[^\"')]+)?#assets/stats.svg?v=${run_id}#g" \
-              -e "s#(\./)?assets/toplangs\.svg(\?v=[^\"')]+)?#assets/toplangs.svg?v=${run_id}#g" \
               README.md
           fi
+
+      - name: Publicar artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: profile-assets-${{ github.run_id }}
+          path: assets/*.svg
+          retention-days: 7
 
       - name: Commit no main
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update profile assets (+cache-bust)"
+          commit_message: "chore: update profile snake (+cache-bust)"
           file_pattern: |
             assets/*.svg
             README.md
