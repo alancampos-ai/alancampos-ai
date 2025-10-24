@@ -1,3 +1,6 @@
+
+
+
 name: profile-assets
 
 on:
@@ -22,7 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0   # mantém histórico necessário
           persist-credentials: true
 
       - name: Preparar diretório de saída
@@ -38,7 +41,6 @@ jobs:
             assets/snake-dark.svg?palette=github-dark&color_snake=blue
 
       - name: Fallback se geração falhar
-        shell: bash
         run: |
           for f in snake.svg snake-dark.svg; do
             if [ ! -s "assets/$f" ]; then
