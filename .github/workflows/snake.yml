@@ -28,11 +28,11 @@ jobs:
             dist/snake.svg?color_snake=blue
             dist/snake-dark.svg?palette=github-dark&color_snake=blue
 
-      - name: Stats e Top Langs (API pública)
+      - name: Stats e Top Langs
         run: |
           mkdir -p dist
-          curl -fL "https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=transparent" -o dist/stats.svg
-          curl -fL "https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=10&theme=transparent" -o dist/toplangs.svg
+          curl -fsSL "https://github-readme-stats.vercel.app/api?username=alancampos-ai&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=transparent" -o dist/stats.svg || echo '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">stats.svg placeholder</text></svg>' > dist/stats.svg
+          curl -fsSL "https://github-readme-stats.vercel.app/api/top-langs/?username=alancampos-ai&layout=compact&langs_count=10&theme=transparent" -o dist/toplangs.svg || echo '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">toplangs.svg placeholder</text></svg>' > dist/toplangs.svg
 
       - name: Publicar no branch output
         uses: crazy-max/ghaction-github-pages@v4
@@ -40,6 +40,5 @@ jobs:
           target_branch: output
           build_dir: dist
           keep_history: true
-          force_orphan: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
