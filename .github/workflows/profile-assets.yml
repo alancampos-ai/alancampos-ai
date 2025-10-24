@@ -1,31 +1,59 @@
 name: profile-assets
 
 on:
-  schedule:
-    - cron: "0 */24 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: "0 3 * * *"  # 03:00 UTC ≈ 00:00 America/Sao_Paulo
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  generate:
-    permissions:
-      contents: write
+  build:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
+
     steps:
-      - name: generate github-contribution-grid-snake.svg
-        uses: Platane/snk/svg-only@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          github_user_name: alancampos-ai
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - name: push github-contribution-grid-snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Preparar diretório de saída
+        run: mkdir -p assets
+
+      - name: Gerar snake
+        uses: Platane/snk@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake.svg?color_snake=blue
+            assets/snake-dark.svg?palette=github-dark&color_snake=blue
+
+      - name: Fallback se geração falhar
+        run: |
+          for f in snake.svg snake-dark.svg; do
+            if [ ! -s "assets/$f" ]; then
+              printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='40'><text x='10' y='25' font-size='16'>$f placeholder</text></svg>" > "assets/$f"
+            fi
+          done
+
+      - name: Sanidade dos SVGs
+        run: |
+          test -s assets/snake.svg
+          test -s assets/snake-dark.svg
+          ls -lh assets
+
+      - name: Commit automático
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update profile snake"
+          file_pattern: assets/*.svg
