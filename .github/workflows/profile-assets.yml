@@ -35,16 +35,13 @@ jobs:
           outputs: |
             assets/snake.svg?color_snake=blue
             assets/snake-dark.svg?palette=github-dark&color_snake=blue
-            assets/snake.gif?color_snake=blue
-            assets/snake-dark.gif?palette=github-dark&color_snake=blue
 
       - name: Verificar artefatos do snake
         run: |
           set -euo pipefail
           ls -l assets || true
-          for f in assets/snake.svg assets/snake-dark.svg assets/snake.gif assets/snake-dark.gif; do
-            test -s "$f"
-          done
+          test -s assets/snake.svg
+          test -s assets/snake-dark.svg
           head -n 5 assets/snake.svg || true
 
       - name: Stats e Top Langs (placeholders se offline)
@@ -52,10 +49,10 @@ jobs:
           curl -fsSL "https://github-readme-stats.vercel.app/api?username=${GITHUB_REPOSITORY_OWNER}&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=transparent" -o assets/stats.svg || echo '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">stats.svg placeholder</text></svg>' > assets/stats.svg
           curl -fsSL "https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_REPOSITORY_OWNER}&layout=compact&langs_count=10&theme=transparent" -o assets/toplangs.svg || echo '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="40"><text x="10" y="25" font-size="16">toplangs.svg placeholder</text></svg>' > assets/toplangs.svg
 
-      - name: Sanidade dos SVGs e GIFs
+      - name: Sanidade dos SVGs
         run: |
           set -euo pipefail
-          for f in assets/snake.svg assets/snake-dark.svg assets/snake.gif assets/snake-dark.gif assets/stats.svg assets/toplangs.svg; do
+          for f in assets/snake.svg assets/snake-dark.svg assets/stats.svg assets/toplangs.svg; do
             test -s "$f"
           done
 
@@ -65,7 +62,6 @@ jobs:
           run_id="${{ github.run_id }}"
           if [ -f README.md ]; then
             sed -E -i "s#(\./)?assets/snake(-dark)?\.svg(\?v=[^\"')]+)?#assets/snake\2.svg?v=${run_id}#g" README.md
-            sed -E -i "s#(\./)?assets/snake(-dark)?\.gif(\?v=[^\"')]+)?#assets/snake\2.gif?v=${run_id}#g" README.md
           fi
 
       - name: Commit no main
@@ -74,5 +70,4 @@ jobs:
           commit_message: "chore: update profile assets (+cache-bust)"
           file_pattern: |
             assets/*.svg
-            assets/*.gif
             README.md
