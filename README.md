@@ -38,7 +38,7 @@ Technology
     <img alt="GitHub contribution snake animation" src="assets/snake.svg">
   </picture>
 </p>
-<br>
+<br> 
 
 Works
 
