@@ -3,18 +3,14 @@ name: profile-assets
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # 03:00 UTC ≈ 00:00 America/Sao_Paulo
+    - cron: "0 3 * * *"  # 03:00 UTC
 
 permissions:
   contents: write
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref_name == github.event.repository.default_branch }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -22,37 +18,71 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   
+          fetch-depth: 0
           persist-credentials: true
 
       - name: Preparar diretório de saída
         run: mkdir -p assets
 
-      - name: Gerar snake (azul)
+      - name: Gerar SVGs da cobrinha
         uses: Platane/snk@v3
         with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: alancampos-ai
           outputs: |
-            assets/snake.svg?color_snake=blue
-            assets/snake-dark.svg?palette=github-dark&color_snake=blue
+            assets/snake.svg
+            assets/snake-dark.svg?palette=github-dark
 
       - name: Fallback se geração falhar
+        shell: bash
         run: |
           for f in snake.svg snake-dark.svg; do
             if [ ! -s "assets/$f" ]; then
-              printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='40'><text x='10' y='25' font-size='16'>$f placeholder</text></svg>" > "assets/$f"
+              echo "Gerando placeholder para $f"
+              printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='640' height='40'><text x='10' y='26' font-size='16' font-family='monospace'>$f placeholder</text></svg>" > "assets/$f"
             fi
           done
 
-      - name: Sanidade dos SVGs
+      - name: Commit dos assets (1º commit)
+        shell: bash
         run: |
-          test -s assets/snake.svg
-          test -s assets/snake-dark.svg
-          ls -lh assets
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git commit -m "chore: update snake assets" || echo "Sem mudanças nos assets"
+          # SHA que conterá os SVGs; servirá para URLs imutáveis no README
+          ASSET_SHA=$(git rev-parse HEAD)
+          echo "ASSET_SHA=$ASSET_SHA" >> $GITHUB_ENV
 
-      - name: Commit automático
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update profile snake"
-          file_pattern: assets/*.svg
+      - name: Atualizar bloco do README com URLs imutáveis (por SHA)
+        shell: bash
+        run: |
+          ASSET_SHA="${ASSET_SHA:-$(git rev-parse HEAD)}"
+          SNIPPET=$(cat <<'EOF'
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/COMMIT_SHA/assets/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/COMMIT_SHA/assets/snake.svg">
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/COMMIT_SHA/assets/snake.svg">
+  </picture>
+</p>
+EOF
+)
+          SNIPPET="${SNIPPET//COMMIT_SHA/$ASSET_SHA}"
+
+          if grep -q "<!-- snake-urls:start -->" README.md && grep -q "<!-- snake-urls:end -->" README.md; then
+            perl -0777 -pe 's|<!-- snake-urls:start -->.*?<!-- snake-urls:end -->|<!-- snake-urls:start -->\n'"$SNIPPET"'\n<!-- snake-urls:end -->|s' -i README.md
+          else
+            {
+              echo
+              echo "<!-- snake-urls:start -->"
+              echo "$SNIPPET"
+              echo "<!-- snake-urls:end -->"
+            } >> README.md
+          fi
+
+      - name: Commit do README (2º commit) e push
+        shell: bash
+        run: |
+          git add README.md assets/*.svg
+          git commit -m "chore: update README snake URLs (pin by commit SHA)" || echo "Sem mudanças no README"
+          git push origin HEAD
