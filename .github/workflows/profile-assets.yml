@@ -1,3 +1,4 @@
+# .github/workflows/profile-assets.yml
 name: profile-assets
 
 on:
@@ -28,27 +29,18 @@ jobs:
             assets/snake.svg?color_snake=blue
             assets/snake-dark.svg?palette=github-dark&color_snake=blue
 
-      # 1) Garante animação mesmo para visitantes com reduced-motion
-      - name: Forçar animação sempre (remover reduced-motion do SVG)
-        run: |
-          set -euo pipefail
-          for f in assets/snake*.svg; do
-            perl -0777 -pe 's/@media\s*\(prefers-reduced-motion:\s*reduce\)\s*\{(?:[^{}]|\{[^{}]*\})*\}//gi' -i "$f"
-            perl -0777 -pe 's/animation(?:-play-state)?:\s*none;?\s*//gi' -i "$f"
-          done
-
-      # 2) Reescreve APENAS as 3 URLs do bloco para RAW + cache-bust
+      # Reescreve APENAS as 3 URLs do bloco para RAW + cache-bust
       - name: Fix links da animação para RAW + cache-bust
         run: |
           set -euo pipefail
           run_id="${{ github.run_id }}"
           RAW_BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/assets"
-          perl -0777 -pe "s#(?:\\./)?assets/snake-dark\\.svg(?:\\?[^\"')]+)?#${RAW_BASE}/snake-dark.svg?v=${run_id}#g; s#(?:\\./)?assets/snake\\.svg(?:\\?[^\"')]+)?#${RAW_BASE}/snake.svg?v=${run_id}#g" -i README.md
+          perl -0777 -pe "s#(?:\./)?assets/snake-dark\.svg(?:\?[^\"')]+)?#${RAW_BASE}/snake-dark.svg?v=${run_id}#g; s#(?:\./)?assets/snake\.svg(?:\?[^\"')]+)?#${RAW_BASE}/snake.svg?v=${run_id}#g" -i README.md
 
       - name: Commit no main
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update profile assets (force animation + raw links)"
+          commit_message: "chore: update profile assets (raw links + cache-bust)"
           file_pattern: |
             assets/*.svg
             README.md
