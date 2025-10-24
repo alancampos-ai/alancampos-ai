@@ -38,7 +38,7 @@ Technology
     <img alt="snake animation" src="./assets/snake.svg?v=999999">
   </picture>
 </p>
-<br> 
+<br>
 
 Works
 <br>
