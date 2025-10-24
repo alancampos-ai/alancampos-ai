@@ -37,6 +37,10 @@ Technology
     <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="assets/snake.svg">
     <img alt="GitHub contribution snake animation" src="assets/snake.svg">
   </picture>
+  <br>
+  <img alt="GitHub Stats" src="assets/stats.svg" />
+  <br>
+  <img alt="Top Languages" src="assets/toplangs.svg" />
 </p>
 <br>
 
