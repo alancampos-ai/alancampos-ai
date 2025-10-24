@@ -30,11 +30,12 @@ Technology
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" height="40"/>
 </p>
 <br>
+
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/alancampos-ai/alancampos-ai/raw/main/assets/snake-dark.svg?v=999999">
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://github.com/alancampos-ai/alancampos-ai/raw/main/assets/snake.svg?v=999999">
-    <img alt="snake animation" src="https://github.com/alancampos-ai/alancampos-ai/raw/main/assets/snake.svg?v=999999">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake-dark.svg?v=999999">
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.svg?v=999999">
+    <img alt="snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.svg?v=999999">
   </picture>
 </p>
 <br>
