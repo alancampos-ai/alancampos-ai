@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'   # ajuste se seu branch padrão não for "main"
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -63,17 +63,6 @@ jobs:
           done
           ls -l assets
 
-      - name: Cache-bust automático no README
-        shell: bash
-        run: |
-          set -Eeuo pipefail
-          run_id="${{ github.run_id }}"
-          if [ -f README.md ]; then
-            sed -E -i \
-              -e "s#(\./)?assets/snake(-dark)?\.svg(\?v=[^\"')]+)?#assets/snake\2.svg?v=${run_id}#g" \
-              README.md
-          fi
-
       - name: Publicar artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -84,10 +73,9 @@ jobs:
       - name: Commit no main
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update profile snake (+cache-bust)"
+          commit_message: "chore: update profile snake"
           file_pattern: |
             assets/*.svg
-            README.md
           branch: ${{ github.ref_name }}
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
