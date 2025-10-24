@@ -8,23 +8,45 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: publish-output
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout main
+        uses: actions/checkout@v4
 
-      - uses: Platane/snk/svg-only@v3
+      - name: Gerar SVGs da snake (azul)
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: alancampos-ai
           outputs: |
             dist/snake.svg?color_snake=blue
             dist/snake-dark.svg?palette=github-dark&color_snake=blue
 
+      - name: Trazer o branch output atual (se existir)
+        uses: actions/checkout@v4
+        with:
+          ref: output
+          path: old_output
+          fetch-depth: 1
+        continue-on-error: true
+
+      - name: Unir arquivos antigos com os novos
+        run: |
+          mkdir -p public
+          if [ -d old_output ]; then
+            cp -a old_output/. public/
+          fi
+          cp -a dist/. public/
+
       - name: Publicar no branch output
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
