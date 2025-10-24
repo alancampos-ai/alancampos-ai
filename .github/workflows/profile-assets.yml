@@ -3,56 +3,32 @@ name: profile-assets
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # 03:00 UTC ≈ 00:00 America/Sao_Paulo
+    - cron: "0 3 * * *"  # 03:00 UTC
 
 permissions:
   contents: write
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0   
-          persist-credentials: true
 
-      - name: Preparar diretório de saída
+      - name: Garantir diretório de saída
         run: mkdir -p assets
 
-      - name: Gerar snake (azul)
+      - name: Gerar SVGs da cobrinha
         uses: Platane/snk@v3
         with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_user_name: alancampos-ai
           outputs: |
-            assets/snake.svg?color_snake=blue
-            assets/snake-dark.svg?palette=github-dark&color_snake=blue
+            assets/snake.svg
+            assets/snake-dark.svg?palette=github-dark
 
-      - name: Fallback se geração falhar
-        run: |
-          for f in snake.svg snake-dark.svg; do
-            if [ ! -s "assets/$f" ]; then
-              printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='40'><text x='10' y='25' font-size='16'>$f placeholder</text></svg>" > "assets/$f"
-            fi
-          done
-
-      - name: Sanidade dos SVGs
-        run: |
-          test -s assets/snake.svg
-          test -s assets/snake-dark.svg
-          ls -lh assets
-
-      - name: Commit automático
+      - name: Commit dos assets
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update profile snake"
+          commit_message: "chore: update snake"
           file_pattern: assets/*.svg
