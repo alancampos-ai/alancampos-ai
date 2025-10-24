@@ -7,7 +7,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -15,30 +14,22 @@ concurrency:
 
 jobs:
   build:
-    # ajuste se seu branch padrão não for "main"
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-          persist-credentials: false
+          fetch-depth: 0   # mantém histórico necessário
+          persist-credentials: true
 
       - name: Preparar diretório de saída
-        shell: bash
-        run: |
-          set -Eeuo pipefail
-          mkdir -p assets
+        run: mkdir -p assets
 
-      - name: Snake (azul)
-        id: snake
+      - name: Gerar snake (azul)
         uses: Platane/snk@v3
-        continue-on-error: true
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -46,10 +37,8 @@ jobs:
             assets/snake.svg?color_snake=blue
             assets/snake-dark.svg?palette=github-dark&color_snake=blue
 
-      - name: Fallback do snake se offline
-        shell: bash
+      - name: Fallback se geração falhar
         run: |
-          set -Eeuo pipefail
           for f in snake.svg snake-dark.svg; do
             if [ ! -s "assets/$f" ]; then
               printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='40'><text x='10' y='25' font-size='16'>$f placeholder</text></svg>" > "assets/$f"
@@ -57,30 +46,13 @@ jobs:
           done
 
       - name: Sanidade dos SVGs
-        shell: bash
         run: |
-          set -Eeuo pipefail
-          for f in assets/snake.svg assets/snake-dark.svg; do
-            test -s "$f"
-          done
-          ls -l assets
+          test -s assets/snake.svg
+          test -s assets/snake-dark.svg
+          ls -lh assets
 
-      - name: Publicar artifacts
-        uses: actions/upload-artifact@v4
+      - name: Commit automático
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: profile-assets-${{ github.run_id }}
-          path: assets/*.svg
-          retention-days: 7
-
-      # Em vez de push direto no main, abre/atualiza um PR fixo
-      - name: Abrir/atualizar PR com os SVGs
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: update profile snake"
-          title: "chore: update profile snake"
-          body: "Atualização automática dos assets do perfil."
-          branch: bot/update-snake
-          add-paths: |
-            assets/snake.svg
-            assets/snake-dark.svg
+          commit_message: "chore: update profile snake"
+          file_pattern: assets/*.svg
