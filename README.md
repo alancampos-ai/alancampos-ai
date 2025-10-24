@@ -33,9 +33,9 @@ Technology
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake-dark.svg?v=999999">
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.svg?v=999999">
-    <img alt="snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.svg?v=999999">
+    <source media="(prefers-color-scheme: dark)" type="image/svg+xml" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake-dark.svg?v=999999">
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" type="image/svg+xml" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.svg?v=999999">
+    <img alt="snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.gif?v=999999">
   </picture>
 </p>
 <br>
