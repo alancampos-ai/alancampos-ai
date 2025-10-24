@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -14,7 +15,8 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'   # ajuste se seu branch padrão não for "main"
+    # ajuste se seu branch padrão não for "main"
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -70,12 +72,15 @@ jobs:
           path: assets/*.svg
           retention-days: 7
 
-      - name: Commit no main
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # Em vez de push direto no main, abre/atualiza um PR fixo
+      - name: Abrir/atualizar PR com os SVGs
+        uses: peter-evans/create-pull-request@v6
         with:
-          commit_message: "chore: update profile snake"
-          file_pattern: |
-            assets/*.svg
-          branch: ${{ github.ref_name }}
-          commit_user_name: github-actions[bot]
-          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update profile snake"
+          title: "chore: update profile snake"
+          body: "Atualização automática dos assets do perfil."
+          branch: bot/update-snake
+          add-paths: |
+            assets/snake.svg
+            assets/snake-dark.svg
