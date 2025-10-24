@@ -8,22 +8,51 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
+    if: ${{ github.ref_name == github.event.repository.default_branch }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
-      - name: Gerar SVGs da cobrinha
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Preparar diretório
+        run: mkdir -p assets
+
+      - name: Gerar SVGs da cobrinha azul
         uses: Platane/snk@v3
+        continue-on-error: true
         with:
           github_user_name: alancampos-ai
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
+            assets/snake.svg?color_snake=%230057d8
+            assets/snake-dark.svg?palette=github-dark&color_snake=%230057d8
 
-      - name: Publicar no branch 'output'
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: Fallback se geração falhar
+        run: |
+          for f in snake.svg snake-dark.svg; do
+            if [ ! -s "assets/$f" ]; then
+              printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='640' height='40'><text x='10' y='26' font-size='16' font-family='monospace'>$f placeholder</text></svg>" > "assets/$f"
+            fi
+          done
+
+      - name: Sanidade
+        run: |
+          test -s assets/snake.svg
+          test -s assets/snake-dark.svg
+
+      - name: Commit automático
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: update profile snake (blue)"
+          file_pattern: assets/*.svg
