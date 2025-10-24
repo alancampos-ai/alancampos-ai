@@ -31,12 +31,10 @@ Technology
 </p>
 <br>
 
-<div align="center">
-
-![GitHub contribution snake animation](https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake-dark.svg#gh-dark-mode-only)
-![GitHub contribution snake animation](https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/main/assets/snake.svg#gh-light-mode-only)
-
-</div>
+<p align="center">
+  <img src="assets/snake-dark.svg#gh-dark-mode-only" alt="GitHub contribution snake animation">
+  <img src="assets/snake.svg#gh-light-mode-only" alt="GitHub contribution snake animation">
+</p>
 <br>
 
 Works
