@@ -33,9 +33,9 @@ Technology
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/snake-dark.svg?v=999999">
-    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/snake.svg?v=999999">
-    <img alt="snake animation" src="./assets/snake.svg?v=999999">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/snake-dark.svg?raw=1&v=999999">
+    <source media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" srcset="./assets/snake.svg?raw=1&v=999999">
+    <img alt="snake animation" src="./assets/snake.svg?raw=1&v=999999">
   </picture>
 </p>
 <br>
