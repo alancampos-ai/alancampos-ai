@@ -1,4 +1,4 @@
-name: profile-assets 
+name: profile-assets
 
 on:
   workflow_dispatch:
@@ -62,7 +62,16 @@ jobs:
 EOF
 )
           SNIPPET="${SNIPPET//COMMIT_SHA/$ASSET_SHA}"
-          perl -0777 -pe 's|<!-- snake-urls:start -->.*?<!-- snake-urls:end -->|<!-- snake-urls:start -->\n'"$SNIPPET"'\n<!-- snake-urls:end -->|s' -i README.md
+          if grep -q "<!-- snake-urls:start -->" README.md && grep -q "<!-- snake-urls:end -->" README.md; then
+            perl -0777 -pe 's|<!-- snake-urls:start -->.*?<!-- snake-urls:end -->|<!-- snake-urls:start -->\n'"$SNIPPET"'\n<!-- snake-urls:end -->|s' -i README.md
+          else
+            {
+              echo
+              echo "<!-- snake-urls:start -->"
+              echo "$SNIPPET"
+              echo "<!-- snake-urls:end -->"
+            } >> README.md
+          fi
           git add README.md
           git commit -m "chore: pin snake URLs by commit SHA" || echo "no changes"
           git push
