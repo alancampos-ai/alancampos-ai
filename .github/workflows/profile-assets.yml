@@ -25,6 +25,7 @@ jobs:
 
       - name: Gerar SVGs da cobrinha azul (LNCC)
         uses: Platane/snk@v3
+        continue-on-error: true
         with:
           github_user_name: alancampos-ai
           outputs: |
