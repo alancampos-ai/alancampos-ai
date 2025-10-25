@@ -44,8 +44,16 @@ jobs:
           test -s assets/snake-dark.svg
           ls -lh assets
 
+      - name: Cache-busting no README
+        run: |
+          ts="$(date -u +%Y%m%d%H%M%S)"
+          sed -i -E "s#(assets/snake-dark\.svg)(\?v=[0-9]+)?#\1?v=${ts}#g" README.md
+          sed -i -E "s#(assets/snake\.svg)(\?v=[0-9]+)?#\1?v=${ts}#g" README.md
+
       - name: Commit automático
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update profile snake"
-          file_pattern: assets/*.svg
+          commit_message: "chore: refresh snake"
+          file_pattern: |
+            assets/snake*.svg
+            README.md
