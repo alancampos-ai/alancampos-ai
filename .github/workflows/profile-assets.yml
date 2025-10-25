@@ -1,4 +1,4 @@
-name: profile-assets
+name: profile-assets 
 
 on:
   workflow_dispatch:
