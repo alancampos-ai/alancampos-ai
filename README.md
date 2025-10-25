@@ -31,12 +31,9 @@ Technology
 </p>
 <br>
 
-<!-- Snake -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake-light.svg">
-  <img alt="GitHub contribution snake animation" src="./assets/github-snake-light.svg">
-</picture>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake.svg" alt="Snake animation" />
+</div>
 <br> 
 
 Works
