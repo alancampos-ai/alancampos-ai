@@ -1,11 +1,11 @@
 name: snake
 on:
   schedule:
-    - cron: "* */12 * * *"
+    - cron: "0 2 * * *"
   workflow_dispatch:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   generate:
