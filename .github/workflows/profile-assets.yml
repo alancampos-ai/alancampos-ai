@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   
+          fetch-depth: 0
           persist-credentials: true
 
       - name: Preparar diretório de saída
@@ -37,16 +37,9 @@ jobs:
             assets/snake.svg?color_snake=blue
             assets/snake-dark.svg?palette=github-dark&color_snake=blue
 
-      - name: Fallback se geração falhar
-        run: |
-          for f in snake.svg snake-dark.svg; do
-            if [ ! -s "assets/$f" ]; then
-              printf '%s\n' "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='40'><text x='10' y='25' font-size='16'>$f placeholder</text></svg>" > "assets/$f"
-            fi
-          done
-
       - name: Sanidade dos SVGs
         run: |
+          set -e
           test -s assets/snake.svg
           test -s assets/snake-dark.svg
           ls -lh assets
