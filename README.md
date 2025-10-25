@@ -31,13 +31,12 @@ Technology
 </p>
 <br>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg?v=2025">
-    <source media="(prefers-color-scheme: light)" srcset="assets/snake.svg?v=2025">
-    <img alt="GitHub contribution snake animation" src="assets/snake.svg?v=2025">
-  </picture>
-</p>
+<!-- Snake: modo claro/escuro robusto -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake-light.svg">
+  <img alt="GitHub contribution snake animation" src="./assets/github-snake-light.svg">
+</picture>
 <br> 
 
 Works
