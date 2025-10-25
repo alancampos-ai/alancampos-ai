@@ -12,6 +12,7 @@ jobs:
   build:
     if: ${{ github.ref_name == github.event.repository.default_branch }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -20,10 +21,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Preparar diretório
+      - name: Prepare directories
         run: mkdir -p assets
 
-      - name: Gerar SVGs da cobrinha azul (LNCC)
+      - name: Generate snake SVGs (LNCC blue)
         uses: Platane/snk@v3
         continue-on-error: true
         with:
@@ -32,7 +33,7 @@ jobs:
             assets/snake.svg?color_snake=%230057d8
             assets/snake-dark.svg?palette=github-dark&color_snake=%230057d8
 
-      - name: Cache-bust por conteúdo (força ETag novo)
+      - name: Content cache-bust
         run: |
           TS=$(date -u +%Y%m%d%H%M%S)
           for f in assets/snake.svg assets/snake-dark.svg; do
@@ -40,8 +41,28 @@ jobs:
             awk -v ts="$TS" 'NR==1 && /<svg/ { sub(/<svg/, "<svg data-build=\"" ts "\"") } { print }' "$f" > "$f.tmp" && mv "$f.tmp" "$f"
           done
 
-      - name: Commit automático
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update profile snake (blue + cache-bust)"
-          file_pattern: assets/*.svg
+      - name: Commit assets and capture SHA
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/*.svg
+          git commit -m "chore: update snake (blue + cache-bust)" || echo "no changes"
+          echo "ASSET_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
+      - name: Update README block with SHA and push
+        run: |
+          SNIPPET=$(cat <<'EOF'
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/COMMIT_SHA/assets/snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/COMMIT_SHA/assets/snake.svg">
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/COMMIT_SHA/assets/snake.svg">
+  </picture>
+</p>
+EOF
+)
+          SNIPPET="${SNIPPET//COMMIT_SHA/$ASSET_SHA}"
+          perl -0777 -pe 's|<!-- snake-urls:start -->.*?<!-- snake-urls:end -->|<!-- snake-urls:start -->\n'"$SNIPPET"'\n<!-- snake-urls:end -->|s' -i README.md
+          git add README.md
+          git commit -m "chore: pin snake URLs by commit SHA" || echo "no changes"
+          git push
