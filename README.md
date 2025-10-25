@@ -31,7 +31,7 @@ Technology
 </p>
 <br>
 
-<!-- Snake: modo claro/escuro robusto -->
+<!-- Snake -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake-light.svg">
