@@ -33,7 +33,7 @@ Technology
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/alancampos-ai/alancampos-ai/output/snake.svg" alt="Snake animation" />
-</div>
+</div> 
 <br>
 
 Works
