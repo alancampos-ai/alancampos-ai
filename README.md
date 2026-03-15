@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at the Universidade do Estado do Rio de Janeiro. Bachelor's in Computer Science from the Universidade do Estado do Rio de Janeiro. My research focuses on artificial intelligence, with an emphasis on machine learning and deep learning applied to computer vision. I design equivariant convolutional architectures over discrete and continuous groups, including gauge-equivariant networks on Riemannian manifolds, with the goal of producing well-calibrated probabilistic estimates. I also investigate clustering methods on the cone of symmetric positive definite (SPD) matrices, applied to segmentation in diffusion tensor magnetic resonance imaging (DT-MRI). I develop PyTorch libraries and end-to-end pipelines for scientific computing.
+PhD candidate in Computational Sciences at the Rio de Janeiro State University. Holds a Bachelor's degree in Computer Science from the Rio de Janeiro State University. I conduct research in Scientific Computing, with emphasis on Artificial Intelligence, machine learning, optimization, and numerical analysis. My research focuses on problems in which geometric structure, symmetries, and numerical formulations play a central role in the construction, implementation, and analysis of algorithms. In this context, I study equivariant networks, methods on Riemannian manifolds and on the cone of symmetric positive definite matrices, as well as algorithms for classification, clustering, vector optimization, and numerical simulation. I also develop reproducible implementations in PyTorch and pipelines for scientific computing.
 <br>
 <br>
  
