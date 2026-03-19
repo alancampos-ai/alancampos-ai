@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at Rio de Janeiro State University. Holds a Bachelor's degree in Computer Science from Rio de Janeiro State University. Conducts research in Artificial Intelligence, Machine Learning, Optimization, and Numerical Analysis. Research focuses on problems in which geometric structure, symmetries, and numerical formulations play a central role in the design, implementation, and analysis of algorithms. In this context, studies equivariant networks, methods on Riemannian manifolds and on the cone of symmetric positive definite matrices, as well as algorithms for classification, clustering, vector optimization, and numerical simulation. Also develops reproducible implementations in PyTorch and pipelines for scientific computing.
+PhD candidate in Computational Sciences at Rio de Janeiro State University. Holds a Bachelor's degree in Computer Science from Rio de Janeiro State University. Conducts research in Artificial Intelligence, Machine Learning, Optimization, and Numerical Analysis. Research focuses on problems in which geometric structure, symmetries, and numerical formulations play a central role in the design, implementation, and analysis of algorithms. In this context, studies equivariant networks, methods on Riemannian manifolds and on the cone of symmetric positive definite matrices, as well as algorithms for classification, clustering, vector optimization, and numerical simulation. Also develops implementations in PyTorch and pipelines for scientific computing.
 <br>
 <br>
  
