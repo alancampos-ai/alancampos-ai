@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at the State University of Rio de Janeiro. Bachelor’s degree in Computer Science from the State University of Rio de Janeiro. I conduct research in Artificial Intelligence and Scientific Computing, implementing in PyTorch numerical algorithms in equivariant neural architectures and numerical methods applied to optimization, differential equations, and scientific simulation. I research methods on Riemannian manifolds, algorithms on the cone of symmetric positive definite matrices, and approaches aimed at reducing predictive uncertainty.
+PhD candidate in Computational Sciences at the State University of Rio de Janeiro. Holds a Bachelor's degree in Computer Science from the State University of Rio de Janeiro. Conducts research in Artificial Intelligence and Scientific Computing, with implementation of numerical algorithms in equivariant neural networks and numerical methods applied in optimization, differential equations, and scientific simulation.
 <br>
 <br>
  
