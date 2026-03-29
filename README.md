@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-Ph.D. candidate in Computational Sciences at Rio de Janeiro State University. B.Sc. in Computer Science from Rio de Janeiro State University. I conduct research in Artificial Intelligence and Scientific Computing, with emphasis on the development of equivariant neural architectures and numerical algorithms applied to optimization, differential equations, and scientific simulation. I investigate methods on Riemannian manifolds, algorithms on the cone of symmetric positive definite matrices, and approaches to reducing predictive uncertainty. I also develop implementations in PyTorch.
+Ph.D. candidate in Computational Sciences at Rio de Janeiro State University. B.Sc. in Computer Science from Rio de Janeiro State University. I conduct research in Artificial Intelligence and Scientific Computing, implementing in PyTorch numerical algorithms in equivariant neural architectures and numerical methods applied to optimization, differential equations, and scientific simulation. I also investigate methods on Riemannian manifolds, algorithms on the cone of symmetric positive definite matrices, and approaches aimed at reducing predictive uncertainty.
 <br>
 <br>
  
