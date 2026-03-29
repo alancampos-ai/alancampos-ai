@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at the State University of Rio de Janeiro. Holds a Bachelor's degree in Computer Science from the State University of Rio de Janeiro. Conducts research in Artificial Intelligence and Scientific Computing, with implementation of numerical algorithms in equivariant neural networks and numerical methods applied in optimization, differential equations, and scientific simulation.
+PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science at the State University of Rio de Janeiro. Research in Artificial Intelligence and Scientific Computing, with implementation of Numerical Algorithms in Equivariant Neural Networks and Numerical Methods applied to Optimization, Differential Equations, and Scientific Simulation.
 <br>
 <br>
  
