@@ -41,7 +41,7 @@ Works
 <br>
 <div>
   <sub><small>
-    <strong>• A Generalized K-Lα Centroids Algorithm for DT-MRI Segmentation</strong>
+    <strong>• Journal of Computational and Applied Mathematics: A Generalized K-Lα Centroids Algorithm for DT-MRI Segmentation</strong>
     &nbsp;
     <a href="https://doi.org/10.1016/j.cam.2026.117584"><img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14"></a>&nbsp;&nbsp;
     <a href="https://doi.org/10.1016/j.cam.2026.117584"><img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14"></a>
