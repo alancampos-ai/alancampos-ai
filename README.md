@@ -36,7 +36,7 @@ Technology
 </div>
 <br>
 
-Works
+Articles
 
 <br>
 <div>
