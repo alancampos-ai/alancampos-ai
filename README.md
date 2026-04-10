@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science at the State University of Rio de Janeiro. Has experience in the field of Applied and Computational Mathematics, working mainly on the following topics: Scientific Computing, Optimization, Differential Equations, Neural Networks, and Artificial Intelligence.
+PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science at the State University of Rio de Janeiro. Has experience in the field of Applied and Computational Mathematics, working mainly on the following topics: Scientific Computing, Numerical Analysis, Optimization, Differential Equations, Neural Networks, and Artificial Intelligence.
 <br>
 <br>
  
