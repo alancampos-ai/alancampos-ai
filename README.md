@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science at the State University of Rio de Janeiro. Has experience in the field of Applied and Computational Mathematics.
+PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science at the State University of Rio de Janeiro. Has experience in the field of Applied and Computational Mathematics, working primarily on the following topics: Data Science and Artificial Intelligence.
 <br>
 <br>
  
