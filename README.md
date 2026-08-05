@@ -38,13 +38,28 @@ Technology
 
 Articles
 
-<br>
+<div>
+  <sub><small>
+    <strong>• Pattern Recognition Letters: Metric-based supervised classification of SPD diffusion tensor images</strong>
+    &nbsp;
+    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+      <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
+    </a>&nbsp;&nbsp;
+    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+      <img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14">
+    </a>
+  </small></sub>
+</div>
+
 <div>
   <sub><small>
     <strong>• Journal of Computational and Applied Mathematics: A Generalized K-Lα Centroids Algorithm for DT-MRI Segmentation</strong>
     &nbsp;
-    <a href="https://doi.org/10.1016/j.cam.2026.117584"><img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14"></a>&nbsp;&nbsp;
-    <a href="https://doi.org/10.1016/j.cam.2026.117584"><img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14"></a>
+    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+      <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
+    </a>&nbsp;&nbsp;
+    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+      <img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14">
+    </a>
   </small></sub>
 </div>
-<br>
