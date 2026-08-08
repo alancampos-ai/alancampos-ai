@@ -42,10 +42,10 @@ Articles
   <sub><small>
     <strong>• <img src="figure/Prl.jpg" alt="Pattern Recognition Letters" height="14"> Pattern Recognition Letters: Metric-based supervised classification of SPD diffusion tensor images</strong>
     &nbsp;
-    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+    <a href="https://doi.org/10.1016/j.patrec.2026.08.004">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
     </a>&nbsp;&nbsp;
-    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+    <a href="https://doi.org/10.1016/j.patrec.2026.08.004">
       <img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14">
     </a>
   </small></sub>
