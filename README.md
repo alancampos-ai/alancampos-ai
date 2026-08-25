@@ -44,9 +44,6 @@ Articles
     &nbsp;
     <a href="https://doi.org/10.1016/j.patrec.2026.08.004">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
-    </a>&nbsp;&nbsp;
-    <a href="https://doi.org/10.1016/j.patrec.2026.08.004">
-      <img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14">
     </a>
   </small></sub>
 </div>
@@ -57,9 +54,6 @@ Articles
     &nbsp;
     <a href="https://doi.org/10.1016/j.cam.2026.117584">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
-    </a>&nbsp;&nbsp;
-    <a href="https://doi.org/10.1016/j.cam.2026.117584">
-      <img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14">
     </a>
   </small></sub>
 </div>
@@ -70,9 +64,6 @@ Articles
     &nbsp;
     <a href="https://link.springer.com/journal/500">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
-    </a>&nbsp;&nbsp;
-    <a href="https://link.springer.com/journal/500">
-      <img src="https://cdn.simpleicons.org/zenodo/2dd4bf" alt="Zenodo" height="14">
     </a>
   </small></sub>
 </div>
