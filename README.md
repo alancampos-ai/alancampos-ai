@@ -62,7 +62,7 @@ Articles
   <sub><small>
     <strong>• <img src="figure/Scomp.jpg" alt="Soft Computing" height="14"> Soft Computing: A New Perspective on Centroid Algorithms for Unsupervised Discrete Clustering on Riemannian Manifolds: An Approach via Image Optimization</strong>
     &nbsp;
-    <a href="https://link.springer.com/journal/500">
+    <a href="https://link.springer.com/article/10.1007/s00500-026-11422-8">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
     </a>
   </small></sub>
