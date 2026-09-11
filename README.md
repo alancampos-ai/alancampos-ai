@@ -40,9 +40,9 @@ Articles
 
 <div>
   <sub><small>
-    <strong>• <img src="figure/Prl.jpg" alt="Pattern Recognition Letters" height="14"> Pattern Recognition Letters: Metric-based supervised classification of SPD diffusion tensor images</strong>
+    <strong>• <img src="figure/Jcam.jpg" alt="Journal of Computational and Applied Mathematics" height="14"> Journal of Computational and Applied Mathematics: A Generalized K-Lα Centroids Algorithm for DT-MRI Segmentation</strong>
     &nbsp;
-    <a href="https://doi.org/10.1016/j.patrec.2026.08.004">
+    <a href="https://doi.org/10.1016/j.cam.2026.117584">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
     </a>
   </small></sub>
@@ -50,9 +50,9 @@ Articles
 
 <div>
   <sub><small>
-    <strong>• <img src="figure/Jcam.jpg" alt="Journal of Computational and Applied Mathematics" height="14"> Journal of Computational and Applied Mathematics: A Generalized K-Lα Centroids Algorithm for DT-MRI Segmentation</strong>
+    <strong>• <img src="figure/Prl.jpg" alt="Pattern Recognition Letters" height="14"> Pattern Recognition Letters: Metric-based supervised classification of SPD diffusion tensor images</strong>
     &nbsp;
-    <a href="https://doi.org/10.1016/j.cam.2026.117584">
+    <a href="https://doi.org/10.1016/j.patrec.2026.08.004">
       <img src="https://cdn.simpleicons.org/doi/2dd4bf" alt="DOI" height="14">
     </a>
   </small></sub>
