@@ -1,7 +1,7 @@
 Biography
 <br>
 <br>
-PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science at the State University of Rio de Janeiro. Has experience in Computer Science and Computational Mathematics, working mainly on the following topics: Artificial Intelligence, Machine Learning, Deep Learning, Convolutional Neural Networks, Optimization, Pattern Recognition, and Computational Methods on Riemannian Manifolds.
+PhD candidate in Computational Sciences at the State University of Rio de Janeiro. BSc in Computer Science from the State University of Rio de Janeiro. Has experience in Computer Science and Computational Mathematics, working mainly on the following topics: Artificial Intelligence, Machine Learning, Deep Learning, Convolutional and Equivariant Neural Networks, Numerical Analysis, Scientific Computing, Optimization, Pattern Recognition, and Computational Methods on Riemannian Manifolds.
 <br>
 <br>
  
